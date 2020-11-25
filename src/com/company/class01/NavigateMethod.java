@@ -13,7 +13,7 @@ public class NavigateMethod {
         Thread.sleep(1000); // pauses the thread for the given millisecs
         driver.navigate().forward();
         driver.navigate().refresh();
-        driver.close(); // close current tab
+        // driver.close(); // close current tab
         driver.quit(); // will quit the whole browser
 
 

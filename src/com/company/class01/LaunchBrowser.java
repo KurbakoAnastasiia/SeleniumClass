@@ -8,9 +8,9 @@ public class LaunchBrowser {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
         WebDriver driver = new ChromeDriver(); // launch the browser
         driver.get("https://syntaxtechs.com/"); // navigate to URL
-        String url = driver.getCurrentUrl();
+        String url = driver.getCurrentUrl(); // getting current url
         System.out.println(url);
-        String title = driver.getTitle();
+        String title = driver.getTitle(); // getting title of the page
         System.out.println(title);
     }
 }

@@ -21,14 +21,17 @@ Print to console only the links that has text*/
         driver.get("https://www.amazon.com/");
         List<WebElement> allLinks = driver.findElements(By.tagName("a"));
         System.out.println(allLinks.size());
+        int countLinksWithText = 0;
         for (WebElement links : allLinks) {
             String fullLink = links.getAttribute("href");
             String textlink = links.getText();
             if(!textlink.isEmpty()) {
+                countLinksWithText++;
                 System.out.println(textlink + "               " + fullLink);
             }
 
         }
+        System.out.println("Number of non-empty links is " + countLinksWithText);
         driver.quit();
     }
 }
